@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon"
+        href="https://p1.hiclipart.com/preview/351/32/936/team-logos-blue-and-red-bw-logo-png-clipart.jpg"
+        type="image/favicon">
+    <title>Mundial</title>
+
+    <link rel="stylesheet" href="estilos/styles.css">
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+        integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+    <script>
+        var part = "";
+        $.getJSON('partidos.json', function (datos) {
+            $("#contenido").html('');
+            $.each(datos["partidos"], function (idx, partido) {
+                $("#contenido").append("<tr>" +
+                    "<td>" + partido["fecha"] + "</td><td>" + partido["equipo1"] + "</td><td>" + partido.equipo2 + "</td>" + "</tr>");
+            });
+        });
+    </script>
+
+</head>
+
+<body>
+    <nav id="cabezon" class="navbar navbar-default">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collpased" data-toggle="collapse" data-target="#navbar"
+                    aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <img id="logo" title="Rusia 2018"
+                    src="http://www.balonazos.com/wp-content/uploads/2015/11/RUSIA2018.png" />
+
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">Inicio</a></li>
+                    <li class=""><a href="#">Sede</a></li>
+                    <li class=""><a href="#">Partidos</a></li>
+                    <li class=""><a href="#">Grupo A</a></li>
+                    <li class=""><a href="#">Grupo B</a></li>
+                    <li class=""><a href="#">Grupo C</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Grupo H <span
+                                class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Polonia</a></li>
+                            <li><a href="#">Senegal</a></li>
+                            <li><a href="selecciones/colombia.html" id="selh3">Colombia</a></li>
+                            <li><a href="#">Japon</a></li>
+                        </ul>
+                    </li>
+                    <li class=""><a href="#">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>Fecha</th>
+                            <th>Equipo Local</th>
+                            <th>Equipo Visitante</th>
+                        </tr>
+                    </thead>
+                    <tbody id="contenido">
+                    </tbody>
+
+    <script>
+        var part = "";
+        $.getJSON('partidos.json', function (datos) {
+            $("#contenido").html('');
+            $.each(datos["partidos"], function (idx, partido) {
+                $("#contenido").append("<tr>" +
+                    "<td>" + partido["fecha"] + "</td><td>" + partido["equipo1"] + "</td><td>" + partido["equipo2"] + "</td>" + "</tr>");
+            });
+        });
+    </script>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <p class="text-muted">Programación Aplicaciones Web - 2019</p>
+        </div>
+    </footer>
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+
+
+
+
+</body>
+
+</html>
